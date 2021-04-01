@@ -1,0 +1,286 @@
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>Audio samples from "Improve Cross-Lingual Text-To-Speech Synthesis on Monolingual Corpora \newline with Pitch Contour Information"</title>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Audio samples from "Improve Cross-Lingual Text-To-Speech Synthesis on Monolingual Corpora with Pitch Contour Information"</h1>
+      </header>
+    </article>
+
+    <div><b>Abstract:</b>
+        Cross-lingual text-to-speech (TTS) synthesis on monolingual corpora is still a challenging task, especially when many kinds of languages are involved. In this paper, we improve the cross-lingual TTS model on monolingual corpora with pitch contour information. In this model, we propose a method to obtain pitch contour sequences for different languages without manual annotation, and extend the Tacotron-based TTS model with the proposed Pitch Contour Extraction (PCE) module. Our experimental results show that the proposed approach can effectively improve the naturalness and consistency of different kinds of mixed-lingual synthesis utterances.
+    </div>
+
+    &nbsp;
+
+    <p class="toc_title">Contents</p>
+    <div id="toc_container">
+    <ul>
+      <li><a href="#phone_tts">Language-dependent Phoneme</a></li>
+      <li><a href="#ipa_baseline">IPA Baseline</a></li>
+       <li><a href="#ipa_proposed">IPA Proposed</a></li>
+    </ul>
+    </div>
+
+		<div>
+
+      <a name="origin_wav"><h2>Reference Audio</h2></a>
+       <table>
+        <tbody>
+        <tr>
+          <td nowrap=""></td>
+          <td align="left"><div class="">Text: 卡尔普陪外孙玩滑梯</div></td>
+            <td align="left"><div class="">Text: 假语村言别再拥抱我</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/Reference/000001.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Reference/000002.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap=""></td>
+          <td align="left"><div class="">Text: Printing, in the only sense with which we are at present concerned, <br>differs from most if not from all the arts and crafts represented in the Exhibition.</div></td>
+            <td align="left"><div class="">Text: in being comparatively modern.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/Reference/LJ001-0001.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Reference/LJ001-0002.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap=""></td>
+          <td align="left"><div class="">Text: この前探った時は、途中に瘢痕の隆起があったので、<br>ついそこが行きどまりだとばかり思って、ああ云ったんですが、</div></td>
+            <td align="left"><div class="">Text: 今日疎通を好くするために、そいつをがりがり掻き落して見ると、<br>まだ奥があるんです</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/Reference/meian_0000.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Reference/meian_0001.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+      <a name="phone_tts"><h2>Language-dependent Phoneme</h2></a>
+       <table>
+        <tbody>
+        <tr>
+          <td nowrap=""></td>
+          <td align="center"><div class="">Text: 现代文明，Modern Civilization, |核戦争に脅かされている。|</div></td>
+            <td align="center"><div class="">Text: |木曜日、停戦会談は、|什么进展也没有。 No progress has been made.</div></td>
+            <td align="center"><div class="">Text: |中心部にあるので、|去商店和办公室都很方便。 It is convenient to go to shops and offices.</div></td>
+            <td align="center"><div class="">Text: Bother you, 给您添麻烦了，|申し訳ありません。|</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/Phone/CN/00000.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/CN/00001.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/CN/00002.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/CN/00003.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/Phone/EN/00000.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/EN/00001.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/EN/00002.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/EN/00003.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/Phone/JP/00000.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/JP/00001.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/JP/00002.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Phone/JP/00003.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+       <a name="ipa_baseline"><h2>IPA Baseline</h2></a>
+       <table>
+        <tbody>
+        <tr>
+          <td nowrap=""></td>
+          <td align="center"><div class="">Text: 如果没有意见, the agenda is adopted.</div></td>
+            <td align="center"><div class="">Text: 这两件事情更加凸显了 <br> the tensions in recent days.</div></td>
+            <td align="center"><div class="">Text: The scientists also made field <br>observations 来支持实验室的研究结果.</div></td>
+            <td align="center"><div class="">Text: Remember to 告诉我，when you think of his name.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-EN-04.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+        <table>
+        <tbody>
+        <tr>
+          <td nowrap=""></td>
+          <td align="center"><div class="">Text: 给您添麻烦了，|申し訳ありません。|</div></td>
+            <td align="center"><div class="">Text: |上院議員は、|指责我篡改数据。</div></td>
+            <td align="center"><div class="">Text: Hope and dream are <br>|絶対に見つからない。|</div></td>
+            <td align="center"><div class="">Text: |気の弱い男が、| Can not get the favor of beauties.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-JP-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/EN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/EN-JP-02.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-JP-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/EN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/EN-JP-02.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-JP-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/EN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/EN-JP-02.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap=""></td>
+          <td align="center"><div class="">Text: 现代文明，Modern Civilization, |核戦争に脅かされている。|</div></td>
+            <td align="center"><div class="">Text: |木曜日、停戦会談は、|什么进展也没有。 No progress has been made.</div></td>
+            <td align="center"><div class="">Text: |中心部にあるので、|去商店和办公室都很方便。 It is convenient to go to shops and offices.</div></td>
+            <td align="center"><div class="">Text: Bother you, 给您添麻烦了，|申し訳ありません。|</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-JP-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-JP-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-JP-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/CN/CN-JP-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-JP-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-JP-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-JP-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/EN/CN-JP-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-JP-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-JP-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-JP-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_baseline_withJP/JP/CN-JP-EN-04.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+              <a name="ipa_proposed"><h2>IPA Proposed</h2></a>
+       <table>
+        <tbody>
+        <tr>
+          <td nowrap=""></td>
+          <td align="center"><div class="">Text: 如果没有意见, the agenda is adopted.</div></td>
+            <td align="center"><div class="">Text: 这两件事情更加凸显了 <br>the tensions in recent days.</div></td>
+            <td align="center"><div class="">Text: The scientists also made field <br>observations 来支持实验室的研究结果.</div></td>
+            <td align="center"><div class="">Text: Remember to 告诉我，when you think of his name.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-EN-04.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+             <table>
+        <tbody>
+        <tr>
+          <td nowrap=""></td>
+          <td align="center"><div class="">Text: 给您添麻烦了，|申し訳ありません。|</div></td>
+            <td align="center"><div class="">Text: |上院議員は、|指责我篡改数据。</div></td>
+            <td align="center"><div class="">Text: Hope and dream are <br>|絶対に見つからない。|</div></td>
+            <td align="center"><div class="">Text: |気の弱い男が、| Can not get the favor of beauties.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-JP-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/EN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/EN-JP-02.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-JP-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/EN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/EN-JP-02.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-JP-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/EN-JP-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/EN-JP-02.wav"></audio></td>
+        </tr>
+                <tr>
+          <td nowrap=""></td>
+          <td align="center"><div class="">Text: 现代文明，Modern Civilization, |核戦争に脅かされている。|</div></td>
+            <td align="center"><div class="">Text: |木曜日、停戦会談は、|什么进展也没有。 No progress has been made.</div></td>
+            <td align="center"><div class="">Text: |中心部にあるので、|去商店和办公室都很方便。 It is convenient to go to shops and offices.</div></td>
+            <td align="center"><div class="">Text: Bother you, 给您添麻烦了，|申し訳ありません。|</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">CN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-JP-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-JP-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-JP-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/CN/CN-JP-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">EN Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-JP-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-JP-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-JP-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/EN/CN-JP-EN-04.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">JP Speaker</td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-JP-EN-01.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-JP-EN-02.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-JP-EN-03.wav"></audio></td>
+          <td><audio controls=""><source src="demos/IPA_proposed_withJP/JP/CN-JP-EN-04.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+      <p>&nbsp;</p>
+    </div>
+
+</body></html>
